@@ -23,6 +23,11 @@ struct ipApp: App {
                     .padding()
                 
                 Divider()
+
+                Text("Версия: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Неизвестно")")
+                    .padding(.vertical, 5)
+
+                Divider()                
                 
                 Button("Exit") {
                     NSApplication.shared.terminate(nil)
