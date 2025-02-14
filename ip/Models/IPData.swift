@@ -45,7 +45,8 @@ struct IPDetails: Decodable {
             "Greece": "GR",
             "Turkey": "TR",
             "Israel": "IL",
-            "Singapore": "SG"
+            "Singapore": "SG",
+            "Bulgaria": "BG"
         ]
         
         return countryMapping[country] ?? "??"
