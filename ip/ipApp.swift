@@ -21,14 +21,18 @@ struct ipApp: App {
             VStack {
                 Text(viewModel.displayText)
                     .padding()
-                
                 Divider()
-
                 Text("Версия: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Неизвестно")")
                     .padding(.vertical, 5)
-
-                Divider()                
-                
+                Divider()
+                // Добавляем кнопку GitHub
+                Button("GitHub") {
+                    if let url = URL(string: "https://github.com/alardus/ip-menubar") {
+                        NSWorkspace.shared.open(url)
+                    }
+                }
+                .padding(.vertical, 5)
+                Divider()
                 Button("Exit") {
                     NSApplication.shared.terminate(nil)
                 }
