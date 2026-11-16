@@ -2,7 +2,7 @@ import Foundation
 
 class IPService {
     static let shared = IPService()
-    private let url = URL(string: "https://geo.dynip.space/api/data")!
+    private let url = URL(string: "https://0ip.dev/api/data")!
     
     func fetchIPData() async throws -> IPResponse {
         let (data, _) = try await URLSession.shared.data(from: url)
